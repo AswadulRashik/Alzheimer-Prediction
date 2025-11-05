@@ -26,6 +26,8 @@ The dataset contains 2149 patient records and includes variables spanning demogr
 We treated this as a binary classification problem where the goal is to predict whether a patient has Alzheimer’s or not (Diagnosis: 0 or 1).
 
 -Models Used:
-**Random Forest Classifier**
-**Support Vector Machine (SVM)**
-**CatBoost Classifier**
+**Random Forest Classifier**: Random Forest performed very well, achieving 94.42% accuracy. This model works by building many decision trees during training and combining their outputs through majority voting. Because each tree learns slightly different patterns, the final result becomes more stable and robust. The high precision indicates that when the model predicts Alzheimer’s, it is usually correct; however, its slightly lower recall shows that it sometimes misses individuals who actually have the disease.
+
+**Support Vector Machine (SVM)**: CatBoost achieved the highest performance overall, with 94.88% accuracy and the best balance between precision and recall. CatBoost is a gradient boosting algorithm that builds trees sequentially, where each new tree attempts to correct the errors of previous ones. It handles categorical and structured data effectively and automatically reduces overfitting. Its higher recall means it is better at identifying patients who truly have Alzheimer’s, making it a strong candidate for medical screening applications.
+
+**CatBoost Classifier**: SVM with RBF kernel performed lower than the other two, achieving 83.49% accuracy. SVM tries to find the best separating boundary (hyperplane) between classes by transforming the data into a higher-dimensional space using the RBF kernel. While powerful for complex, non-linear patterns, SVM performance can drop when there are many features or when the classes overlap significantly. This is reflected in the lower recall and F1-score, meaning it struggled to consistently detect Alzheimer’s cases.
