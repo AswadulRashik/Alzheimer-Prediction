@@ -25,13 +25,7 @@ The dataset contains 2149 patient records and includes variables spanning demogr
 
 We treated this as a binary classification problem where the goal is to predict whether a patient has Alzheimer’s or not (Diagnosis: 0 or 1).
 
-- Models Used:
-
-**Random Forest ClassifierModel Training and Evaluation
-
-We treated this as a binary classification problem where the goal is to predict whether a patient has Alzheimer’s or not (Diagnosis: 0 or 1).
-
-Models Used:
+-Models Used:
 **Random Forest Classifier**
 **Support Vector Machine (SVM)**
 **CatBoost Classifier**
