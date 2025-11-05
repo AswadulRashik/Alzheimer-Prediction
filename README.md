@@ -24,6 +24,7 @@ The dataset contains 2149 patient records and includes variables spanning demogr
 # Model Training and Evaluation
 
 We treated this as a binary classification problem where the goal is to predict whether a patient has Alzheimer’s or not (Diagnosis: 0 or 1). 
+
 **Models Used**: 
 
 **Random Forest Classifier**: Random Forest performed very well, achieving 94.42% accuracy. This model works by building many decision trees during training and combining their outputs through majority voting. Because each tree learns slightly different patterns, the final result becomes more stable and robust. The high precision indicates that when the model predicts Alzheimer’s, it is usually correct; however, its slightly lower recall shows that it sometimes misses individuals who actually have the disease.
