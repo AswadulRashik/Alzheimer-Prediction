@@ -11,22 +11,27 @@ The dataset contains 2149 patient records and includes variables spanning demogr
 
 # Data Preprocessing
 
-Removing Irrelevant Features
+**Removing Irrelevant Features**: PatientID and DoctorInCharge were dropped as they do not convey predictive information.
 
-PatientID and DoctorInCharge were dropped as they do not convey predictive information.
+**Handling Data Types & Missing Values**: The dataset does not contain missing values, so no imputation was required.
 
-Handling Data Types & Missing Values
+**Encoding Categorical Variables**: Several features such as Gender, Ethnicity, and Medical Conditions were already in numerical form. Therefore, no encoding step was necessary.
 
-The dataset does not contain missing values, so no imputation was required.
+**Feature Scaling**: Numerical features like Age, BMI, SleepQuality, etc., were standardized to improve model convergence and stability.
 
-Encoding Categorical Variables
+**Train-Test Split**: Data was split into 70% training and 30% testing to evaluate model generalization performance.
 
-Several features such as Gender, Ethnicity, and Medical Conditions were already in numerical form. Therefore, no encoding step was necessary.
+# Model Training and Evaluation
 
-Feature Scaling
+We treated this as a binary classification problem where the goal is to predict whether a patient has Alzheimer’s or not (Diagnosis: 0 or 1).
 
-Numerical features like Age, BMI, SleepQuality, etc., were standardized to improve model convergence and stability.
+- Models Used:
 
-Train-Test Split
+**Random Forest ClassifierModel Training and Evaluation
 
-Data was split into 70% training and 30% testing to evaluate model generalization performance.
+We treated this as a binary classification problem where the goal is to predict whether a patient has Alzheimer’s or not (Diagnosis: 0 or 1).
+
+Models Used:
+**Random Forest Classifier**
+**Support Vector Machine (SVM)**
+**CatBoost Classifier**
